@@ -29,3 +29,18 @@ This project simulates a real-world serverless data ingestion pipeline for IoT d
 - Define Terraform infrastructure
 - Add basic error handling and retries
 - Improve observability and logging
+
+- ## Usage Example
+
+Below is an example of a simulated IoT payload that the ingestion Lambda is expected to receive:
+
+```json
+{
+  "deviceId": "device-001",
+  "timestamp": "2025-01-01T12:00:00Z",
+  "data": {
+    "temperature": 27.4,
+    "humidity": 38
+  }
+}
+
