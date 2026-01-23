@@ -5,9 +5,10 @@ This project simulates a real-world serverless data ingestion pipeline for IoT d
 
 ## Architecture
 - API Gateway receives data from simulated IoT devices
-- AWS Lambda (TypeScript) handles ingestion
-- Messages are queued using SQS for decoupling
-- A processing Lambda stores data in DynamoDB
+- Ingestion Lambda validates and logs incoming events
+- Messages are sent to an SQS queue for decoupled processing
+- Processor Lambda consumes messages asynchronously
+- Processed data can be stored in DynamoDB
 - Logs and metrics are collected via CloudWatch
 
 ## Tech Stack
