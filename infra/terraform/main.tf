@@ -10,3 +10,6 @@ terraform {
 provider "aws" {
   region = "us-east-1"
 }
+resource "aws_sqs_queue" "iot_queue" {
+  name = "iot-data-queue"
+}
