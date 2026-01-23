@@ -13,3 +13,6 @@ This function is designed to be small, stateless, and easy to scale.
 The `processor` Lambda consumes messages from an SQS queue.
 It processes incoming records asynchronously, enabling the system
 to scale independently from the ingestion layer.
+
+The processor Lambda parses incoming messages and prepares items
+to be stored in DynamoDB, simulating a real persistence layer.
